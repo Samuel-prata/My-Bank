@@ -11,7 +11,7 @@ export const SecondSection = styled.div`
 export const ImageTwo = styled.img`
   width: 50%;
   height: 80vh;
-  border-radius: 50px;
+  /* border-radius: 50px; */
   @media (max-width: 1300px) {
     display: none;
   }
@@ -34,8 +34,11 @@ export const ContainerText = styled.div`
 `;
 
 export const TitleAbout = styled.h1`
-  color: orange;
+  color: white;
+  font-size: 100px;
 `;
 export const TextAbout = styled.p`
   color: white;
+  font-size: 30px;
+  font-family: 'Times New Roman', Times, serif;
 `;

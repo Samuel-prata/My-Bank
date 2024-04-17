@@ -43,7 +43,7 @@ export default function Footer() {
         </InformationContainerFooter>
         <InformationDeveloper>
           <ContainerInformationDeveloper>
-            <InformationDeveloper>Silverio, 2024</InformationDeveloper>
+            <InformationDeveloper>Silverio Tech, 2024</InformationDeveloper>
           </ContainerInformationDeveloper>
         </InformationDeveloper>
       </FootBar>

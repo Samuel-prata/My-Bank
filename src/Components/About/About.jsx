@@ -20,7 +20,9 @@ export default function About() {
             <TextAbout>
               Somos um banco especializado em enriquecer pessoas, dentre nossos
               clientes temos os mortais mais ricos e poderosos do mundo.
-              Nascidos em 2017 pela mente brilhante de nosso CEO Amarildo
+              Nascidos em 2017 pela mente brilhante de nosso CEO, Amarildo.
+              Com a crise financeira e a inflação nas alturas, SamThunder financia os sonhos das pessoas.
+              Com até 100% Cashback em pagamentos por boleto e 200% a.m para empréstimos
             </TextAbout>
           </ContainerText>
         </ContainerAbout>

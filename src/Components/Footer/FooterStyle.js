@@ -5,7 +5,7 @@ export const FootBar = styled.section`
   width: 100%;
   background-color: white;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 `;
 export const Contact = styled.span`
   color: red;
@@ -26,7 +26,6 @@ export const NumberContact = styled.h2`
 `;
 
 export const InformationContainerFooter = styled.div`
-  border: 5px solid black;
   width: 20%;
   height: 20vh;
   display: flex;
@@ -53,11 +52,12 @@ text-align: center;
 `;
 
 export const ContainerInformationDeveloper = styled.div`
-    width: 20%;
+    width: 100%;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 `
-export const InformationDeveloper = styled.h2`
-    color: black
+export const InformationDeveloper = styled.h3`
+color: black;
 `
