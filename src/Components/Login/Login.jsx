@@ -8,6 +8,8 @@ import {
 import Button from "@mui/material/Button";
 import { TextField } from "@mui/material";
 import PersonIcon from '@mui/icons-material/Person';
+import { Link } from "react-router-dom";
+
 
 export default function Login() {
 
@@ -27,7 +29,10 @@ export default function Login() {
 
         <ContainerButton>
           <Button variant="outlined" style={{padding:"15px"}}>Sign in</Button>
-          <Button variant="contained" style={{padding:"15px"}}>Sign Up</Button>
+          <Link to="/Sign-Up">
+          <Button variant="contained" style={{padding:"15px"}}> Sign Up</Button>
+          </Link>
+         
         </ContainerButton>
       </ScreenLogin>
     </>
