@@ -1,17 +1,18 @@
 import React from "react";
-import Header from "./Components/Header/Header";
-import Body from "./Components/Body/Body";
+import Home from "./Components/Home/Home";
+import Register from "./Components/Register/Register";
 import "./App.css";
-import Footer from "./Components/Footer/Footer";
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 
-
-
-export default function App(){
+export default function App() {
   return (
     <>
-    <Header/>
-    <Body/>
-    <Footer/>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/Sign-Up" element={<Register />} />
+        </Routes>
+      </BrowserRouter>
     </>
-  )
+  );
 }
