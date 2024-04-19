@@ -24,21 +24,30 @@ export const ContainerAbout = styled.div`
   align-items: center;
   justify-content: center;
   justify-content: space-evenly;
+
+ 
 `;
 
 export const ContainerText = styled.div`
   width: 50%;
   @media (max-width: 1300px) {
     width: 100%;
+    height: 100%;
   }
 `;
 
 export const TitleAbout = styled.h1`
   color: white;
   font-size: 100px;
+  @media (max-width: 1300px) {
+    font-size: 50px
+  }
 `;
 export const TextAbout = styled.p`
   color: white;
   font-size: 30px;
   font-family: 'Times New Roman', Times, serif;
+  @media (max-width: 1300px) {
+    font-size: 20px
+  }
 `;
