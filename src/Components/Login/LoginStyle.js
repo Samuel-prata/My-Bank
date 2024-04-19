@@ -22,8 +22,8 @@ export const ScreenLogin = styled.div`
   }
 `;
 
-export const ContainerInformation = styled.div`
-  height: 20vh;
+export const ContainerInformation = styled.form`
+  height: 30vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -33,6 +33,7 @@ export const ContainerInformation = styled.div`
 export const ContainerButton = styled.div`
   display: flex;
   justify-content: space-evenly;
+  width: 100%;
 `;
 
 export const ContainerTitle = styled.div`
