@@ -31,12 +31,12 @@ export const ScreenRegister = styled.div`
   }
 `;
 
-export const ContainerInformation = styled.div`
-  height: 40vh;
+export const ContainerInformation = styled.form`
+  height: 50vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-around;
 `;
 
 export const ContainerButton = styled.div`
