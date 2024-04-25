@@ -5,17 +5,21 @@ import { TextField } from "@mui/material";
 import Button from "@mui/material/Button";
 import Foto1 from "./Register-Images/1.png";
 import {
+  Back,
   BodyRegister,
   ContainerButton,
   ContainerInformation,
   ContainerTitle,
   ImageContainer,
   ImageRegister,
+  NavRegister,
   ScreenRegister,
 } from "./RegisterStyle";
 import { LogoImage, Navbar, Navigator } from "../Header/style";
 import { Link, NavLink } from "react-router-dom";
 import api from "../../Services/api";
+import ArrowBackIcon from "@mui/icons-material/ArrowBack";
+import { ArrowBack } from "@mui/icons-material";
 
 export default function Register() {
   const [userData, setUserData] = useState({
@@ -23,25 +27,26 @@ export default function Register() {
     email: "",
     cpf: "",
     password: "",
-    photo: ""
+    photo: "",
   });
 
   const handleChange = (event) => {
     setUserData({
       ...userData,
-      [event.target.name]: event.target.value
+      [event.target.name]: event.target.value,
     });
 
-    console.log(`nome:${userData.name}`)
-    console.log(`email:${userData.email}`)
+    console.log(`nome:${userData.name}`);
+    console.log(`email:${userData.email}`);
   };
 
   const handleSubmit = async (event) => {
     event.preventDefault();
     console.log(userData);
     try {
-      const response = await api.post(`http://localhost:8080/operations`, userData)
-      .then((response) => setUserData(response.data))
+      const response = await api
+        .post(`http://localhost:8080/operations`, userData)
+        .then((response) => setUserData(response.data));
       alert("Usuario cadastrado com sucesso!");
       console.log("Cadastro com sucesso");
     } catch (error) {
@@ -53,16 +58,17 @@ export default function Register() {
 
   return (
     <>
-      <Navbar style={{ width: "100%" }}>
-        <Navigator style={{ width: "100%", alignItems: "center" }}>
-          <NavLink to="/" style={{ textDecoration: "none", padding: "20px" }}>
+      <NavRegister>
+        <NavLink to="/" style={{
+          textDecoration:'none'
+        }}>
+          <Back>
             {" "}
-            <LogoImage>
-              ⚡Sam<span>Thunder</span>
-            </LogoImage>{" "}
-          </NavLink>
-        </Navigator>
-      </Navbar>
+            <ArrowBack sx={{ color: "white", fontSize: "30px" }} />
+            Voltar
+          </Back>
+        </NavLink>
+      </NavRegister>
       <BodyRegister>
         <ImageContainer>
           <ImageRegister src={Foto1} />

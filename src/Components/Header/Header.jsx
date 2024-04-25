@@ -1,5 +1,6 @@
 import React from "react";
 import {
+  Functions,
   Hamburguer,
   LineNav,
   LoginOption,
@@ -7,9 +8,10 @@ import {
   Navbar,
   Navigator,
 } from "./style";
-import logo from "/src/assets/Logo-Samthunder.png";
 import MenuIcon from "@mui/icons-material/Menu";
 import LoginIcon from "@mui/icons-material/Login";
+import { Button } from "@mui/material";
+import { NavLink } from "react-router-dom";
 
 function Header() {
   return (
@@ -19,9 +21,9 @@ function Header() {
           ⚡Sam<span>Thunder</span>
         </LogoImage>
         <Navbar>
-          <LineNav>Sobre nós</LineNav>
-          <LineNav>Contato</LineNav>
-          <LineNav>Filiais</LineNav>
+          <LineNav>Para vocês</LineNav>
+          <LineNav>Para empresas</LineNav>
+          <LineNav>Para MEI</LineNav>
           <Hamburguer>
             <MenuIcon style={{ color: "white" }} />
           </Hamburguer>
@@ -31,6 +33,12 @@ function Header() {
             <p>Login</p>
           </LoginOption>
         </Navbar>
+        <Functions>
+          <Button variant="outlined #b9030a" sx={{height:'50px', color:'#b9030a'}}>Entrar</Button>
+          <NavLink to="/Sign-Up">
+          <Button variant="contained" color="error" sx={{height:'50px', backgroundColor:'#b9030a'}}> Cadastrar</Button>
+          </NavLink>
+        </Functions>
       </Navigator>
     </>
   );

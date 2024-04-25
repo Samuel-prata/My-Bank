@@ -7,26 +7,31 @@ const DisplayFlexAuto = () => css`
 `;
 
 export const Navigator = styled.nav`
-  background-color: #b9030a;
+  background-color: #f5f9ff;
   height: 10vh;
   display: flex;
   justify-content: space-around;
 `;
 
 export const Navbar = styled.ul`
-  width: 20%;
+  width: 30%;
   display: flex;
   justify-content: space-around;
   align-items: center;
   :hover {
-    color: gold;
     cursor: pointer;
+    font-size: 25px;
+    background-color: #b9030a;
+    color: white;
+    border-radius: 10px;
+    padding: 1%;
   }
+
 `;
 
 export const LineNav = styled.li`
+  color: #b9030a ;
   list-style: none;
-  color: white;
   font-size: x-large;
   @media (max-width: 1300px) {
     display: none;
@@ -34,7 +39,7 @@ export const LineNav = styled.li`
 `;
 
 export const LogoImage = styled.h2`
-  color: white;
+  color: #b9030a;
   ${DisplayFlexAuto}
   span {
     padding-top: 5px;
@@ -73,4 +78,11 @@ export const LoginOption = styled.div`
       transform: scale(120%);
     }
   }
+`;
+
+export const Functions = styled.div`
+  width: 15%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 `;

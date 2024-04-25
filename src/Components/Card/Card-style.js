@@ -15,7 +15,6 @@ export const CardContainer = styled.div`
 export const ImageOne = styled.img`
   width: 100%;
   height: 80vh;
-  border-radius: 50px;
   @media (max-width: 1300px) {
     display: flex;
     justify-content: flex-end;

@@ -1,5 +1,4 @@
-import {styled,css} from "styled-components";
-
+import { styled, css } from "styled-components";
 
 const CenterAll = () => css`
   display: flex;
@@ -8,10 +7,10 @@ const CenterAll = () => css`
 `;
 
 export const BodyRegister = styled.section`
-display: flex;
-align-items: center;
-justify-content: space-around;
-`
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+`;
 export const ScreenRegister = styled.div`
   display: flex;
   flex-direction: column;
@@ -54,9 +53,25 @@ export const ImageContainer = styled.div`
   @media (max-width: 1300px) {
     display: none;
   }
-`
+`;
 
 export const ImageRegister = styled.img`
   width: 100%;
-`
+`;
+export const NavRegister = styled.nav`
+  height: 10vh;
+  background-color: #b9030a;
+  display: flex;
+  align-items: center;
+`;
 
+export const Back = styled.h2`
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  align-items: center;
+  &:hover {
+    cursor: pointer;
+    transform: scale(120%);
+  }
+`;
