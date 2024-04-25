@@ -7,7 +7,7 @@ export const ContainerPerfil = styled.section`
 `;
 
 export const ContainerOperation = styled.div`
-  background-color: orange;
+  background-color: white;
   height: 100%;
   width: 80%;
   display: flex;
@@ -17,7 +17,7 @@ export const ContainerOperation = styled.div`
 `;
 
 export const Itens = styled.h3`
-color: black;
+color: white;
 font-size: 20px;
 
 `

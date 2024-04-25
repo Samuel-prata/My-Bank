@@ -7,6 +7,8 @@ import Register from "./Components/Register/Register.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "./Components/Home/Home.jsx";
 import Perfil from "./Components/Perfil/Perfil.jsx";
+import PixArea from "./Components/Perfil/PixArea.jsx";
+import KeyPix from "./Components/Operations/KeyPix.jsx";
 
 const router = createBrowserRouter([
   {
@@ -18,9 +20,16 @@ const router = createBrowserRouter([
     element: <Home />,
   },
   {
-    path:"/user",
-    element: <Perfil/>
-
+    path: "/User",
+    element: <Perfil />,
+  },
+  {
+    path: "/PixArea",
+    element: <PixArea />,
+  },
+  {
+    path:"/PixArea/Key",
+    element: <KeyPix/>
   }
 ]);
 

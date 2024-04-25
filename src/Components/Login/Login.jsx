@@ -32,9 +32,9 @@ export default function Login() {
     event.preventDefault()
 
     try{
-      const response = api.post("http://localhost:8080/operations/login")
-      .then((response) => setUserLogin(response.data))
-      alert("Login realizado com sucesso")
+      const response =  await api.post("http://localhost:8080/operations/login")
+     setUserLogin(response.data)
+     alert('Login realizado com sucesso')
       console.log(userLogin)
     }catch(error) {
       alert("Dados incorretos ou inexistentes")

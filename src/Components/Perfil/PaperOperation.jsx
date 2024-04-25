@@ -7,6 +7,7 @@ import QrCodeScannerIcon from "@mui/icons-material/QrCodeScanner";
 import CarRentalIcon from "@mui/icons-material/CarRental";
 import SendToMobileSharpIcon from "@mui/icons-material/SendToMobileSharp";
 import { Itens } from "./PerfilStyle";
+import { Link } from "react-router-dom";
 
 const DemoPaper = styled(Paper)(({ theme }) => ({
   width: 320,
@@ -19,62 +20,70 @@ const DemoPaper = styled(Paper)(({ theme }) => ({
 export default function PaperOperation() {
   return (
     <>
-    <Stack direction="row" spacing={2}>
-      <DemoPaper
-        variant="elevation"
-        style={{
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          flexDirection: "column",
-          justifyContent: "space-evenly",
-        }}
-      >
-        <SendToMobileSharpIcon />
-        <Itens>Pix</Itens>
-      </DemoPaper>
-      <DemoPaper
-        variant="outlined"
-        style={{
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          flexDirection: "column",
-          justifyContent: "space-evenly",
-        }}
-      >
-        <AccountBalanceWalletIcon />
-        <Itens>Tranferência</Itens>
-      </DemoPaper>
-      <DemoPaper
-        variant="outlined"
-        style={{
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          flexDirection: "column",
-          justifyContent: "space-evenly",
-        }}
-      >
-        <QrCodeScannerIcon />
-        <Itens>Pagar Boleto</Itens>
-      </DemoPaper>
-      <DemoPaper
-        variant="outlined"
-        style={{
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          flexDirection: "column",
-          justifyContent: "space-evenly",
-        }}
-      >
-        <CarRentalIcon />
-        <Itens>Multas</Itens>
-      </DemoPaper>
-    </Stack>
-
-
+      <Stack direction="row" spacing={2}>
+        <Link to="/PixArea">
+          <DemoPaper
+            variant="elevation"
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              flexDirection: "column",
+              justifyContent: "space-evenly",
+              cursor:"pointer",
+              backgroundColor: " #b9030a"
+            }}
+          >
+            <SendToMobileSharpIcon  style={{color:"white"}}/>
+            <Itens>Pix</Itens>
+          </DemoPaper>
+        </Link>
+        <DemoPaper
+          variant="outlined"
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            flexDirection: "column",
+            justifyContent: "space-evenly",
+            cursor:"pointer",
+            backgroundColor: " #b9030a"
+          }}
+        >
+          <AccountBalanceWalletIcon style={{color:"white"}}/>
+          <Itens>Tranferência</Itens>
+        </DemoPaper>
+        <DemoPaper
+          variant="outlined"
+          style={{
+            display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              flexDirection: "column",
+              justifyContent: "space-evenly",
+              cursor:"pointer",
+              backgroundColor: " #b9030a"
+          }}
+        >
+          <QrCodeScannerIcon style={{color:"white"}}/>
+          <Itens>Pagar Boleto</Itens>
+        </DemoPaper>
+        <DemoPaper
+          variant="outlined"
+          style={{
+            display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              flexDirection: "column",
+              justifyContent: "space-evenly",
+              cursor:"pointer",
+              backgroundColor: " #b9030a"
+          }}
+        >
+          <CarRentalIcon style={{color:"white"}}/>
+          <Itens>Multas</Itens>
+        </DemoPaper>
+      </Stack>
     </>
   );
 }

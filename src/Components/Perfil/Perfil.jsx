@@ -17,7 +17,7 @@ export default function Perfil() {
 
   useEffect(() => {
     api
-      .get("/user/7")
+      .get("/user/9")
       .then((response) => setUser(response.data))
       .catch((err) => {
         // alert("Error to catch data from user");
@@ -27,14 +27,24 @@ export default function Perfil() {
   return (
     <>
       <ContainerPerfil>
-        <Card sx={{ maxWidth: 345 }}>
+        <Card
+          sx={{ maxWidth: 345 }}
+          style={{
+            backgroundColor: " #b9030a",
+            width:"30%"
+          }}
+        >
           <CardMedia
             sx={{ height: 140 }}
             image={
               user?.photo != null
                 ? user?.photo
                 : "https://www.shutterstock.com/shutterstock/photos/2059817444/display_1500/stock-vector-no-image-available-photo-coming-soon-illustration-vector-2059817444.jpg"
-            }
+              }
+              style={{
+                width:"100%",
+                height:"40vh"
+              }}
             title="Photo User"
           />
           <CardContent
@@ -52,24 +62,17 @@ export default function Perfil() {
             </Typography>
             <Typography
               variant="body2"
+              backgroundColor="white"
               color="green"
               style={{ fontSize: "larger", fontWeight: "bolder" }}
             >
               R$ {user?.amount}
             </Typography>
           </CardContent>
-          <CardActions>
-            <Button size="small">Depositar</Button>
-            <Button size="small">Sacar</Button>
-            <Button size="small">Pagar</Button>
-            <Button size="small">Tranferir</Button>
-          </CardActions>
         </Card>
 
         <ContainerOperation>
-            <PaperOperation>
-
-            </PaperOperation>
+          <PaperOperation></PaperOperation>
         </ContainerOperation>
       </ContainerPerfil>
     </>
