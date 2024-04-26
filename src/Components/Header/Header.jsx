@@ -34,9 +34,24 @@ function Header() {
           </LoginOption>
         </Navbar>
         <Functions>
-          <Button variant="outlined #b9030a" sx={{height:'50px', color:'#b9030a'}}>Entrar</Button>
+          <NavLink to="/Login">
+            <Button
+              variant="outlined #b9030a"
+              sx={{ height: "50px", color: "#b9030a" }}
+            >
+              Entrar
+            </Button>
+          </NavLink>
+
           <NavLink to="/Sign-Up">
-          <Button variant="contained" color="error" sx={{height:'50px', backgroundColor:'#b9030a'}}> Cadastrar</Button>
+            <Button
+              variant="contained"
+              color="error"
+              sx={{ height: "50px", backgroundColor: "#b9030a" }}
+            >
+              {" "}
+              Cadastrar
+            </Button>
           </NavLink>
         </Functions>
       </Navigator>

@@ -15,11 +15,11 @@ import {
   NavRegister,
   ScreenRegister,
 } from "./RegisterStyle";
-import { LogoImage, Navbar, Navigator } from "../Header/style";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import api from "../../Services/api";
-import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import { ArrowBack } from "@mui/icons-material";
+import { toast, ToastContainer } from 'react-toastify';
+import "react-toastify/dist/ReactToastify.css";
 
 export default function Register() {
   const [userData, setUserData] = useState({
@@ -46,22 +46,34 @@ export default function Register() {
     try {
       const response = await api
         .post(`http://localhost:8080/operations`, userData)
-        .then((response) => setUserData(response.data));
-      alert("Usuario cadastrado com sucesso!");
+        .then((response) => {
+          toast.success("Cadastro realizado com sucesso", {
+            position:'top-right',
+            theme:'colored'
+          })
+          setUserData(response.data);
+        });
+
       console.log("Cadastro com sucesso");
     } catch (error) {
-      console.log(userData);
-      console.log(error);
-      alert("Erro ao cadastrar usuário");
+      toast.error("Erro ao cadastrar usuário", {
+        position:"top-right",
+        theme:"colored"
+      })
     }
   };
+
+
 
   return (
     <>
       <NavRegister>
-        <NavLink to="/" style={{
-          textDecoration:'none'
-        }}>
+        <NavLink
+          to="/"
+          style={{
+            textDecoration: "none",
+          }}
+        >
           <Back>
             {" "}
             <ArrowBack sx={{ color: "white", fontSize: "30px" }} />
@@ -131,9 +143,10 @@ export default function Register() {
                 style={{ padding: "15px" }}
                 type="submit"
               >
-                Sign Up
+                Cadastrar
               </Button>
             </ContainerButton>
+            <ToastContainer/>
           </ContainerInformation>
         </ScreenRegister>
       </BodyRegister>

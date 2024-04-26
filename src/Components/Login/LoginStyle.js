@@ -10,20 +10,16 @@ export const ScreenLogin = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  width: 30%;
-  height: 50vh;
+  width: 50%;
+  height: 70vh;
   border-radius: 20px;
-  -webkit-box-shadow: -9px 7px 130px 0px rgba(185, 3, 10, 0.41);
-  -moz-box-shadow: -9px 7px 130px 0px rgba(185, 3, 10, 0.41);
-  box-shadow: -9px 7px 130px 0px rgba(185, 3, 10, 0.41);
-
   @media (max-width: 1300px) {
     display: none;
   }
 `;
 
 export const ContainerInformation = styled.form`
-  height: 30vh;
+  height: 50vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -33,7 +29,10 @@ export const ContainerInformation = styled.form`
 export const ContainerButton = styled.div`
   display: flex;
   justify-content: space-evenly;
+  flex-direction: column;
+  align-items: center;
   width: 100%;
+  height: 20vh;
 `;
 
 export const ContainerTitle = styled.div`
@@ -80,3 +79,20 @@ export const ButtonSignUp = styled.button`
     transform: scale(110%);
   }
 `;
+
+export const ContainerImage = styled.div`
+  width: 50%;
+  height: 100vh;
+`;
+
+export const ImageLogin = styled.img`
+width: 100%;
+height: 100%;
+`
+
+export const BodyLogin = styled.section`
+width: 100%;
+height: 100vh;
+display: flex;
+align-items: center;
+`

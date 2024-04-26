@@ -5,19 +5,23 @@ import {
   ContainerInformation,
   ContainerButton,
   ContainerTitle,
+  ContainerImage,
+  BodyLogin,
+  ImageLogin,
 } from "./LoginStyle";
 import Button from "@mui/material/Button";
 import { TextField } from "@mui/material";
-import PersonIcon from "@mui/icons-material/Person";
-import { Link } from "react-router-dom";
+import foto from "./Login-Image/foto1.jpg";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { useNavigate } from "react-router-dom";
+import Perfil from "../Perfil/Perfil";
 
 export default function Login() {
-  const SendMessage = () => {
-    <Alert severity="success">This is a success Alert.</Alert>;
-  };
+const navigate = useNavigate();
 
   const [userLogin, setUserLogin] = useState({
-    email: "",
+    cpf: "",
     password: "",
   });
 
@@ -29,60 +33,90 @@ export default function Login() {
   };
 
   const handleSubmit = async (event) => {
-    event.preventDefault()
+    event.preventDefault();
 
-    try{
-      const response =  await api.post("http://localhost:8080/operations/login")
-     setUserLogin(response.data)
-     alert('Login realizado com sucesso')
+    try {
+      const response = await api.post("http://localhost:8080/operations/login", userLogin);
+      setUserLogin(response.data);
+      toast.success("Login realizado com sucesso", {
+        position: "top-right",
+        theme: "colored",
+      });
+      Perfil(userLogin)
+      navigate('/User')
+    } catch (error) {
+      toast.error("Erro ao realizar login", {
+        position: "top-right",
+        theme: "colored",
+      });
+      console.log("Erro: " + error);
       console.log(userLogin)
-    }catch(error) {
-      alert("Dados incorretos ou inexistentes")
-      console.log("Erro: " + error)
     }
-  }
+  };
 
-  
+  const notify = () => {
+    toast.info("Funcionalidade em desenvolvimento", {
+      theme:'colored',
+      position:'top-right'
+    })
+  }
 
   return (
     <>
-      <ScreenLogin>
-        <ContainerTitle>
-          <PersonIcon style={{ fontSize: "50px" }} />{" "}
-          <h1 style={{ color: " black" }}> Sign in</h1>
-        </ContainerTitle>
-        <ContainerInformation onSubmit={handleSubmit}>
-          <TextField
-            id="inputEmail"
-            name="email"
-            label="Email"
-            variant="outlined"
-            style={{ width: "60%" }}
-            onChange={handleChange}
-            value={userLogin.email}
-          />
-          <TextField
-            id="inputPassword"
-            name="password"
-            label="Password"
-            variant="outlined"
-            type="password"
-            style={{ width: "60%" }}
-            value={userLogin.password}
-            onChange={handleChange}
-          />
-          <ContainerButton>
-            <Button variant="outlined" style={{ padding: "15px" }} type="submit">
-              Sign in
-            </Button>
-            <Link to="/Sign-Up">
-              <Button variant="contained" style={{ padding: "15px" }}>
-                Sign Up
+      <BodyLogin>
+        <ScreenLogin>
+          <ContainerTitle>
+            <h1 style={{ color: " black" }}> Acesse sua conta</h1>
+          </ContainerTitle>
+          <ContainerInformation onSubmit={handleSubmit}>
+            <TextField
+              id="inputCpf"
+              name="cpf"
+              label="CPF"
+              variant="outlined"
+              style={{ width: "60%" }}
+              onChange={handleChange}
+              value={userLogin.cpf}
+            />
+            <TextField
+              id="inputPassword"
+              name="password"
+              label="Password"
+              variant="outlined"
+              type="password"
+              style={{ width: "60%" }}
+              value={userLogin.password}
+              onChange={handleChange}
+            />
+            <ContainerButton>
+              <Button
+                variant="contained"
+                color="error"
+                style={{ padding: "15px", width: "60%" }}
+                type="submit"
+              >
+                Entrar
               </Button>
-            </Link>
-          </ContainerButton>
-        </ContainerInformation>
-      </ScreenLogin>
+              <Button
+                variant="text"
+                color="error"
+                style={{
+                  padding: "15px",
+                  width: "60%",
+                  textDecoration: "underline",
+                }}
+                onClick={notify}
+              >
+                Esqueci minha senha
+              </Button>
+              <ToastContainer />
+            </ContainerButton>
+          </ContainerInformation>
+        </ScreenLogin>
+        <ContainerImage>
+          <ImageLogin src={foto} />
+        </ContainerImage>
+      </BodyLogin>
     </>
   );
 }

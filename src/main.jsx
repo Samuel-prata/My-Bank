@@ -9,6 +9,7 @@ import Home from "./Components/Home/Home.jsx";
 import Perfil from "./Components/Perfil/Perfil.jsx";
 import PixArea from "./Components/Perfil/PixArea.jsx";
 import KeyPix from "./Components/Operations/KeyPix.jsx";
+import Login from "./Components/Login/Login.jsx";
 
 const router = createBrowserRouter([
   {
@@ -30,6 +31,10 @@ const router = createBrowserRouter([
   {
     path:"/PixArea/Key",
     element: <KeyPix/>
+  },
+  {
+    path:"/Login",
+    element:<Login/>
   }
 ]);
 

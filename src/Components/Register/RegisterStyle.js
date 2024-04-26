@@ -44,7 +44,9 @@ export const ContainerButton = styled.div`
 `;
 
 export const ContainerTitle = styled.div`
-  ${CenterAll}
+  display: flex;
+  justify-content: left !important;
+  border: 1px solid black;
 `;
 
 export const ImageContainer = styled.div`
