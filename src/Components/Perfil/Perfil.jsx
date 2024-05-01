@@ -20,20 +20,25 @@ import PaperOperation from "./PaperOperation";
 import PaperOperationTwo from "./PixArea";
 import { ClickAwayListener } from "@mui/material";
 import { toast } from "react-toastify";
+import { useLocation } from "react-router-dom";
 
 export default function Perfil() {
-  const [user, setUser] = useState();
+  const [user, setUser] = useState(null);
+  const location = useLocation();
 
   useEffect(() => {
+const dadosUsuario = location.state.dadosUsuario;
+    if(dadosUsuario){
     api
-      .get("/user/25")
+      .get(`/user/${dadosUsuario.cpf}`)
       .then((response) => setUser(response.data))
       .catch((err) => {
         toast.error("Erro ao pegar dados", {
           theme: "colored",
         });
       });
-  }, []);
+    }
+  }, [location]);
 
   return (
     <>
