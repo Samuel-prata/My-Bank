@@ -42,8 +42,7 @@ const navigate = useNavigate();
         position: "top-right",
         theme: "colored",
       });
-      Perfil(userLogin)
-      navigate('/User')
+      navigate('/User', {state: {dadosUsuario: userLogin}})
     } catch (error) {
       toast.error("Erro ao realizar login", {
         position: "top-right",
