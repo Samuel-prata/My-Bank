@@ -17,10 +17,16 @@ const DemoPaper = styled(Paper)(({ theme }) => ({
   textAlign: "center",
 }));
 
+const StyledStack = styled(Stack)`
+  @media (max-width: 1300px) {
+    display: none;
+  }
+`;
+
 export default function PaperOperation() {
   return (
     <>
-      <Stack direction="row" spacing={2}>
+      <StyledStack direction="row" spacing={2}>
         <Link to="/PixArea" style={{ textDecoration: "none" }}>
           <DemoPaper
             variant="elevation"
@@ -83,7 +89,7 @@ export default function PaperOperation() {
           <CarRentalIcon style={{ color: "white" }} />
           <Itens>Multas</Itens>
         </DemoPaper>
-      </Stack>
+      </StyledStack>
     </>
   );
 }

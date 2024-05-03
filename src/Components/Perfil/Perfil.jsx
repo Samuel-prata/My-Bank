@@ -21,6 +21,7 @@ import PaperOperationTwo from "./PixArea";
 import { ClickAwayListener } from "@mui/material";
 import { toast } from "react-toastify";
 import { useLocation } from "react-router-dom";
+import ResponsivePerfil from "./ReponsivePerfil";
 
 export default function Perfil() {
   const [user, setUser] = useState(null);
@@ -57,6 +58,7 @@ export default function Perfil() {
             Seu saldo é R$ {user?.amount}
           </ContainerAmount>
           <PaperOperation></PaperOperation>
+          <ResponsivePerfil></ResponsivePerfil>
         </ContainerOperation>
       </ContainerPerfil>
     </>
