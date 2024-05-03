@@ -18,6 +18,8 @@ export const ContainerOperation = styled.div`
   align-items: center;
   justify-content: space-around;
   flex-direction: column;
+
+
 `;
 
 export const Itens = styled.h3`
@@ -45,6 +47,11 @@ export const DataAccount = styled.h2`
   display: flex;
   justify-content: space-around;
   width: 80vh;
+  @media (max-width: 1300px) {
+    width: 130%;
+    font-size: 10px;
+    justify-content: space-evenly;
+  }
 `;
 
 export const ContainerAmount = styled.div`
@@ -56,4 +63,7 @@ export const ContainerAmount = styled.div`
   color: black;
   font-size: 50px;
   font-family: Arial, Helvetica, sans-serif;
+    @media (max-width: 1300px) {
+    font-size: 35px;
+    }
 `;
