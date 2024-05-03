@@ -17,7 +17,7 @@ export const ImageOne = styled.img`
   height: 80vh;
   @media (max-width: 1300px) {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
     width: 100%;
     height: 50vh;
