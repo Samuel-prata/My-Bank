@@ -1,7 +1,7 @@
 
 
 <h1 align="center">
-	<img src="../Samthunder/src/assets/Images-Readme/Logo.png"  alt="Logo"  width="240"><br><br>
+	<img src="../Samthunder/src/assets/Images-Readme/Logo.png"  alt="Logo"  width="480"><br><br>
    Sistema Escolar Vai na Web
 </h1>
 
