@@ -11,8 +11,24 @@ import SectionTwo from "../SecondSection/SectionTwo";
 import Benefits from "../ThirdSection/Benefits";
 import Info from "./Info";
 import { Link } from "react-router-dom";
+import styled from "styled-components";
 
 export default function Body() {
+  const ResponsiveButton = styled(Link)`
+    @media (max-width: 1300px) {
+      width: 100%;
+
+    }
+  `;
+
+  const Responsive = styled(Button)`
+    display: flex;
+    justify-content: space-between;
+    width: 25vw;
+    @media (max-width: 1300px) {
+      width: 70vw;
+    }
+  `;
   return (
     <>
       <PrincipalSection>
@@ -21,20 +37,11 @@ export default function Body() {
             Mude para o SamThunder e enriqueça rápido como um{" "}
             <Destaque>Trovão </Destaque>{" "}
           </TextPrincipal>
-          <Link style={{textDecoration:'none'}} to="/Sign-Up">
-            <Button
-              variant="contained"
-              color="error"
-              size="large"
-              style={{
-                display: "flex",
-                justifyContent: "space-around",
-                width: "15vw"
-              }}
-            >
+          <ResponsiveButton style={{ textDecoration: "none" }} to="/Sign-Up">
+            <Responsive variant="contained" color="error" size="large">
               Abra sua conta <ArrowForwardIcon />{" "}
-            </Button>
-          </Link>
+            </Responsive>
+          </ResponsiveButton>
         </ContainerInfo>
 
         <Card />

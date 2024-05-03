@@ -19,7 +19,7 @@ export const ImageOne = styled.img`
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    width: 80%;
+    width: 100%;
     height: 50vh;
   }
 `;
