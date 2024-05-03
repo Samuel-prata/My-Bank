@@ -19,10 +19,18 @@ export const ContainerNumberContact = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+   @media (max-width: 1300px) {
+    width:50%;
+
+   }
 `;
 
 export const NumberContact = styled.h2`
   font-size: 20px;
+    @media (max-width: 1300px) {
+    font-size: 15px;
+
+   }
 `;
 
 export const InformationContainerFooter = styled.div`
@@ -31,6 +39,9 @@ export const InformationContainerFooter = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+    @media (max-width: 1300px) {
+      display: none;
+   }
 `;
 export const InformationListFooter = styled.ul`
   height: 15vh;
@@ -60,4 +71,8 @@ export const ContainerInformationDeveloper = styled.div`
 `
 export const InformationDeveloper = styled.h3`
 color: black;
+  @media (max-width: 1300px) {
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+   }
 `

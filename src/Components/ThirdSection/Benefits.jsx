@@ -12,26 +12,29 @@ import LocalGroceryStoreIcon from "@mui/icons-material/LocalGroceryStore";
 import AirplanemodeActiveIcon from "@mui/icons-material/AirplanemodeActive";
 import KeyboardTabIcon from "@mui/icons-material/KeyboardTab";
 import ReceiptLongIcon from "@mui/icons-material/ReceiptLong";
-import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
+import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
 import { ArrowOutward } from "@mui/icons-material";
+import styled from "styled-components";
 
 export default function Benefits() {
+  const StyledBox = styled(Box)`
+    width: 40%;
+    height: 50vh;
+    display: flex;
+    justify-content: space-around;
+
+    @media (max-width: 1300px) {
+      width: 95%;
+    }
+  `;
   return (
     <>
       <Section>
         <ContainerPromotion>
-          <TitleBenefits>#Beneficios ?
-             É com a gente mesmo</TitleBenefits>
-             <ArrowDownwardIcon sx={{color:"white", fontSize:'100px'}}/>
+          <TitleBenefits>#Beneficios ? É com a gente mesmo</TitleBenefits>
+          <ArrowDownwardIcon sx={{ color: "white", fontSize: "100px" }} />
         </ContainerPromotion>
-        <Box
-          sx={{
-            width: "40%",
-            height: "50%",
-            display: "flex",
-            justifyContent: "space-around",
-          }}
-        >
+        <StyledBox >
           <Grid
             container
             rowSpacing={1}
@@ -110,7 +113,7 @@ export default function Benefits() {
               <TypeBenefits>Parcelamento no crédito em até 48x</TypeBenefits>
             </Grid>
           </Grid>
-        </Box>
+        </StyledBox>
       </Section>
     </>
   );
