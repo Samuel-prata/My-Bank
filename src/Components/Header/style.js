@@ -55,7 +55,7 @@ export const LogoImage = styled.h2`
 export const Hamburguer = styled.div`
   display: none;
   @media (max-width: 1300px) {
-    display: block;
+    display: flex;
     &:hover {
       cursor: pointer;
       color: gold;
@@ -86,3 +86,14 @@ export const Functions = styled.div`
   justify-content: space-around;
   align-items: center;
 `;
+
+export const ContainerButtons = styled.div`
+display: flex;
+justify-content: space-around;
+width: 100%;
+
+@media (max-width: 1300px) {
+  display: none;
+}
+`
+
