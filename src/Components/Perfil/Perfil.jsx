@@ -9,7 +9,7 @@ import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import {
-  ContainerDataAccount,
+  ContainerAmount,
   ContainerOperation,
   ContainerPerfil,
   DataAccount,
@@ -27,32 +27,35 @@ export default function Perfil() {
   const location = useLocation();
 
   useEffect(() => {
-const dadosUsuario = location.state.dadosUsuario;
-    if(dadosUsuario){
-    api
-      .get(`/user/${dadosUsuario.cpf}`)
-      .then((response) => setUser(response.data))
-      .catch((err) => {
-        toast.error("Erro ao pegar dados", {
-          theme: "colored",
+    const dadosUsuario = location.state.dadosUsuario;
+    if (dadosUsuario) {
+      api
+        .get(`/user/${dadosUsuario.cpf}`)
+        .then((response) => setUser(response.data))
+        .catch((err) => {
+          toast.error("Erro ao pegar dados", {
+            theme: "colored",
+          });
         });
-      });
     }
   }, [location]);
+  console.log(user);
 
   return (
     <>
       <NavPerfil>
         <HelloMessage> Olá, {user?.name}</HelloMessage>
       </NavPerfil>
-   
+
       <ContainerPerfil>
-      <ContainerDataAccount>
-        <DataAccount>
-          {user?.amount}
-        </DataAccount>
-        </ContainerDataAccount>
         <ContainerOperation>
+          <ContainerAmount>
+            <DataAccount>
+              <h2> Agencia: {user?.dataAccount.agency}</h2>
+              <h2>Numero da conta: {user?.dataAccount.numberAccount}</h2>
+            </DataAccount>
+            Seu saldo é R$ {user?.amount}
+          </ContainerAmount>
           <PaperOperation></PaperOperation>
         </ContainerOperation>
       </ContainerPerfil>

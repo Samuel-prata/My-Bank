@@ -21,7 +21,7 @@ export default function PaperOperation() {
   return (
     <>
       <Stack direction="row" spacing={2}>
-        <Link to="/PixArea">
+        <Link to="/PixArea" style={{ textDecoration: "none" }}>
           <DemoPaper
             variant="elevation"
             style={{
@@ -30,11 +30,11 @@ export default function PaperOperation() {
               justifyContent: "center",
               flexDirection: "column",
               justifyContent: "space-evenly",
-              cursor:"pointer",
-              backgroundColor: " #b9030a"
+              cursor: "pointer",
+              backgroundColor: " #b9030a",
             }}
           >
-            <SendToMobileSharpIcon  style={{color:"white"}}/>
+            <SendToMobileSharpIcon style={{ color: "white" }} />
             <Itens>Pix</Itens>
           </DemoPaper>
         </Link>
@@ -46,41 +46,41 @@ export default function PaperOperation() {
             justifyContent: "center",
             flexDirection: "column",
             justifyContent: "space-evenly",
-            cursor:"pointer",
-            backgroundColor: " #b9030a"
+            cursor: "pointer",
+            backgroundColor: " #b9030a",
           }}
         >
-          <AccountBalanceWalletIcon style={{color:"white"}}/>
+          <AccountBalanceWalletIcon style={{ color: "white" }} />
           <Itens>Tranferência</Itens>
         </DemoPaper>
         <DemoPaper
           variant="outlined"
           style={{
             display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              flexDirection: "column",
-              justifyContent: "space-evenly",
-              cursor:"pointer",
-              backgroundColor: " #b9030a"
+            alignItems: "center",
+            justifyContent: "center",
+            flexDirection: "column",
+            justifyContent: "space-evenly",
+            cursor: "pointer",
+            backgroundColor: " #b9030a",
           }}
         >
-          <QrCodeScannerIcon style={{color:"white"}}/>
+          <QrCodeScannerIcon style={{ color: "white" }} />
           <Itens>Pagar Boleto</Itens>
         </DemoPaper>
         <DemoPaper
           variant="outlined"
           style={{
             display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              flexDirection: "column",
-              justifyContent: "space-evenly",
-              cursor:"pointer",
-              backgroundColor: " #b9030a"
+            alignItems: "center",
+            justifyContent: "center",
+            flexDirection: "column",
+            justifyContent: "space-evenly",
+            cursor: "pointer",
+            backgroundColor: " #b9030a",
           }}
         >
-          <CarRentalIcon style={{color:"white"}}/>
+          <CarRentalIcon style={{ color: "white" }} />
           <Itens>Multas</Itens>
         </DemoPaper>
       </Stack>
