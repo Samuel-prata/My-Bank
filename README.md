@@ -120,7 +120,7 @@ git clone link do repositório
 - Terceira Sessão
   
 <h1 align="center">
-	<img src="../Samthunder/src/assets/Images-Readme/ThirdSection.png"  alt="Listando colaborador por id"  width="100%">
+	<img src="../Samthunder/src/assets/Images-Readme/ThirdSection.png"  alt="Terceira Sessão"  width="100%">
 </h1>
 
 ---
@@ -128,7 +128,7 @@ git clone link do repositório
 -   Tela de Login
   
 <h1 align="center">
-	<img src="../Samthunder/src/assets/Images-Readme/LoginScreen.png"  alt="Listando colaborador por id"  width="100%">
+	<img src="../Samthunder/src/assets/Images-Readme/LoginScreen.png"  alt="Tela de Login"  width="100%">
 </h1>
 
 ---
