@@ -1,7 +1,7 @@
 
 
 <h1 align="center">
-	<img src="../Samthunder/src/assets/Images-Readme/Logo.png"  alt="Logo"  width="480"><br><br>
+	<img src="./src/assets/Images-Readme/Logo.png"  alt="Logo"  width="480"><br><br>
    Sistema Escolar Vai na Web
 </h1>
 
@@ -104,7 +104,7 @@ git clone link do repositório
 - tela principal
 
 <h1 align="center">
-	<img src="../Samthunder/src/assets/Images-Readme/Home.png"  alt="Tela principal"  width="100%">
+	<img src="./src/assets/Images-Readme/Home.png"  alt="Tela principal"  width="100%">
 </h1>
 
 ---
@@ -112,7 +112,7 @@ git clone link do repositório
 - Segunda Sessão
 
 <h1 align="center">
-	<img src="../Samthunder/src/assets/Images-Readme/SecondSection.png"  alt="Segunda Sessão"  width="100%">
+	<img src="./src/assets/Images-Readme/SecondSection.png"  alt="Segunda Sessão"  width="100%">
 </h1>
 
 ---
@@ -120,7 +120,7 @@ git clone link do repositório
 - Terceira Sessão
   
 <h1 align="center">
-	<img src="../Samthunder/src/assets/Images-Readme/ThirdSection.png"  alt="Terceira Sessão"  width="100%">
+	<img src="./src/assets/Images-Readme/ThirdSection.png"  alt="Terceira Sessão"  width="100%">
 </h1>
 
 ---
@@ -128,7 +128,7 @@ git clone link do repositório
 -   Tela de Login
   
 <h1 align="center">
-	<img src="../Samthunder/src/assets/Images-Readme/LoginScreen.png"  alt="Tela de Login"  width="100%">
+	<img src="./src/assets/Images-Readme/LoginScreen.png"  alt="Tela de Login"  width="100%">
 </h1>
 
 ---
