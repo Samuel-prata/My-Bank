@@ -2,7 +2,7 @@
 
 <h1 align="center">
 	<img src="./src/assets/Images-Readme/Logo.png"  alt="Logo"  width="480"><br><br>
-   Sistema Escolar Vai na Web
+Banco Samthunder. Rápido como um raio
 </h1>
 
 <div>
